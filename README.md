@@ -24,4 +24,7 @@ App uses notifications to inform user when entering known location (checked by G
 ## **Known issues:**
 - App crashes when dispaying map and no places are stored in db.
 - New place can be stored without setting circumference (validation needed).
-- Photos of places are stored as base64 strings in db (firebase storage would be better). 
+- Photos of places are stored as base64 strings in db (firebase storage would be better).
+
+
+##### Author: Rafał Reszczyński
