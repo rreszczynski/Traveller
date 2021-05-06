@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Podroznik_s14983</string>
+    <string name="facebook_application_id">3164031836992676</string>
+    <string name="fb_login_protocol_scheme">fb3164031836992676</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

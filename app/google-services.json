@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "835924603413",
+    "firebase_url": "https://podrozniks14983.firebaseio.com",
+    "project_id": "podrozniks14983",
+    "storage_bucket": "podrozniks14983.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835924603413:android:231fb94c3babf2840f541c",
+        "android_client_info": {
+          "package_name": "com.example.podroznik_s14983"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835924603413-ak5d2j7m0jrct831b2vb3mtq1f787hpe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.podroznik_s14983",
+            "certificate_hash": "82b7ce7b512b0175c7da6b5d3212720701d67c51"
+          }
+        },
+        {
+          "client_id": "835924603413-iup37qpsis6mm6rq34vuvi41tf94mjbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATg7QHycvneCHpD6Zr_xsNZhWwVVbI6-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835924603413-iup37qpsis6mm6rq34vuvi41tf94mjbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

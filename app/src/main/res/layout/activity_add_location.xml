@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddLocationActivity">
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Nazwa"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+    <EditText
+        android:id="@+id/editText_latitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:enabled="false"
+        android:hint="dł. geogr."
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/editText_longitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_loc_current" />
+
+    <EditText
+        android:id="@+id/editText_longitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:enabled="false"
+        android:hint="szer. geogr."
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_latitude"
+        app:layout_constraintTop_toTopOf="@+id/editText_latitude" />
+
+    <EditText
+        android:id="@+id/editText_circle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Średnica"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textView_circle"
+        app:layout_constraintStart_toStartOf="@+id/textView_circle"
+        app:layout_constraintTop_toBottomOf="@+id/textView_circle" />
+
+    <EditText
+        android:id="@+id/editText_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="start|top"
+        android:hint="Opis (max. 500 znaków)"
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:maxLength="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_desc_note" />
+
+    <ImageButton
+        android:id="@+id/imageButton_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#3F51B5"
+        android:contentDescription="Przycisk anuluj"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_save"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageButton
+        android:id="@+id/imageButton_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#3F51B5"
+        android:contentDescription="Przycisk zapisz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
+    <TextView
+        android:id="@+id/textView_lokalizacja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lokalizacja:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_latitude"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nazwa miejsca:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Okrąg obejmowania [m]:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_latitude"
+        app:layout_constraintTop_toBottomOf="@+id/editText_latitude" />
+
+    <TextView
+        android:id="@+id/textView_desc_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Opis miejsca:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_circle"
+        app:layout_constraintTop_toBottomOf="@+id/editText_circle" />
+
+    <Button
+        android:id="@+id/button_loc_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Bieżąca"
+        app:layout_constraintEnd_toStartOf="@+id/button_loc_getFromMap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lokalizacja" />
+
+    <Button
+        android:id="@+id/button_loc_getFromMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Z mapy"
+        app:layout_constraintStart_toEndOf="@+id/button_loc_current"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_loc_current" />
+
+    <Button
+        android:id="@+id/button_addPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dodaj zdjęcie"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_circle"
+        app:layout_constraintTop_toTopOf="@+id/textView_circle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
